@@ -71,7 +71,7 @@ const routes: Routes = [
     loadChildren:() => import('./screens/basic-screens/promocion-basic-screen/promocion-basic-screen.module').then(m => m.PromocionBasicScreenModule)
   },
   {
-    path:'promocion-basica',
+    path:'promocion-basica-informacion',
     loadChildren:() => import('./screens/basic-screens/promocion-basic-screen-info/promocion-basic-screen-info.module').then(m => m.PromocionBasicScreenInfoModule)
   }
 
