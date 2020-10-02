@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { PromocionBasicScreenInfoComponent } from './promocion-basic-screen-info.component';
+import { LoginScreenComponent } from './login-screen.component';
 
 const routes: Routes = [
   {
     path:'',
-    component: PromocionBasicScreenInfoComponent
+    component: LoginScreenComponent
   }
 ];
 
@@ -14,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PromocionBasicScreenInfoRoutingModule { }
+export class LoginScreenRoutingModule { }

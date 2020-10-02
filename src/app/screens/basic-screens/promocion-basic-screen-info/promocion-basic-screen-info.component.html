@@ -1,1 +1,21 @@
-<p>promocion-basic-screen-info works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-12">
+
+        </div>
+        <div class="col-lg-4 col-12 mt-4">
+            <ng-container *ngIf="datosUsuario">
+                <div class="card">
+                    <div class="card-body scroll">
+                        <h5 class="card-title text-left mb-4">Informacio de la clinica</h5>
+                        <app-promocion-basic-info [datoUsuario]="datosUsuario"></app-promocion-basic-info>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="col-lg-4 col-12 mt-4">
+
+
+        </div>
+    </div>
+</div>
