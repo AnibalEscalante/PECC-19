@@ -1,0 +1,24 @@
+body {
+  background-color: #77C9D4;
+}
+a {
+  color: black;
+  border: solid 2px;
+  border-color: black;
+}
+#botonBarra {
+  font-size: 30px;
+}
+nav {
+  background-color: #57BC90;
+  border: solid 2px;
+  border-color: black;
+}
+h1 {
+  background-color: #57BC90;
+  text-decoration-style: #015249;
+}
+#sidebar {
+  background-color: #77C9D4;
+  color: black;
+}
