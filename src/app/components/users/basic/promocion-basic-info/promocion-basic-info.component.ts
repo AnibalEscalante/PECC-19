@@ -7,13 +7,17 @@ import { DatoUsuario } from 'src/app/models/datousuario.model';
   styleUrls: ['./promocion-basic-info.component.less']
 })
 export class PromocionBasicInfoComponent implements OnInit {
-
-  @Input()
-  public datoUsuario: DatoUsuario;
+  mensaje: string = "";
+  isDivVisible = false;
   constructor() {
-
+  
   }
 
   ngOnInit(): void {
+  }
+  postulacion()
+  {
+    this.mensaje = "Confirmacion exitosa";
+    this.isDivVisible = true;   
   }
 }

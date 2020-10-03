@@ -20,9 +20,6 @@ export class PostulacionesTrabajoInfoComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  onSubmit(){
-
-  }
   postulacion()
   {
     this.mensaje = "Postulacion exitosa";

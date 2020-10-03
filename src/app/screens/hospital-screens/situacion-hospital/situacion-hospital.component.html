@@ -1,0 +1,107 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-12">
+
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="card m-3">
+                <h5 class="card-header">Registro situacion hospitalaria</h5>
+                <div class="card-body ">
+                    <form [formGroup]="sitHospForm" (ngSubmit)="onSubmit()">
+                        <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" class="color green" role="alert">{{mensaje}}</div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Camas Totales</label>
+                                <input id="camasTotales" name="camasTotales" type="text" formControlName="camasTotales" class="form-control" placeholder="ingrese total de camas" />
+                                <div id='mensaje'>
+                                    <small id="camasTotalesHelp" class="form-text text-muted" *ngIf="(camasTotales.dirty || camasTotales.touched) && camasTotales.invalid && camasTotales.errors.required">camasTotales es Requerido</small>
+                                    <small id="camasTotalesHelp" class="form-text text-muted" *ngIf="(camasTotales.dirty || camasTotales.touched) && camasTotales.invalid && camasTotales.errors.pattern">camasTotales debe contener numeros</small>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Camas disponibles </label>
+                                <input id="camasDisponibles" name="camasDisponibles" type="text" formControlName="camasDisponibles" class="form-control" placeholder="ingrese camas disponibles" />
+                                <div id='mensaje'>
+                                    <small id="camasDisponiblesHelp" class="form-text text-muted" *ngIf="(camasDisponibles.dirty || camasDisponibles.touched) && camasDisponibles.invalid && camasDisponibles.errors.required">camas disponibles es Requerido</small>
+                                    <small id="camasDisponiblesHelp" class="form-text text-muted" *ngIf="(camasDisponibles.dirty || camasDisponibles.touched) && camasDisponibles.invalid && camasDisponibles.errors.pattern">camas disponibles debe contener numeros</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Camas ocupadas</label>
+                                <input id="camasOcupadas" name="camasOcupadas" type="text" formControlName="camasOcupadas" class="form-control" placeholder="ingrese camas ocupadas" />
+                                <div id='mensaje'>
+                                    <small id="camasOcupadasHelp" class="form-text text-muted" *ngIf="(camasOcupadas.dirty || camasOcupadas.touched) && camasOcupadas.invalid && camasOcupadas.errors.required">camas ocupadas es Requerido</small>
+                                    <small id="camasOcupadasHelp" class="form-text text-muted" *ngIf="(camasOcupadas.dirty || camasOcupadas.touched) && camasOcupadas.invalid && camasOcupadas.errors.pattern">camas ocupadas debe contener numeros</small>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12 col-12">
+                                <label>pacientesDerivados</label>
+                                <input id="pacientesDerivados" name="pacientesDerivados" type="text" formControlName="pacientesDerivados" class="form-control" placeholder="ingresse pacientes derivados" />
+                                <div id='mensaje'>
+                                    <small id="pacientesDerivadosHelp" class="form-text text-muted" *ngIf="(pacientesDerivados.dirty || pacientesDerivados.touched) && pacientesDerivados.invalid && pacientesDerivados.errors.required">pacientes derivados es Requerido</small>
+                                    <small id="pacientesDerivadosHelp" class="form-text text-muted" *ngIf="(pacientesDerivados.dirty || pacientesDerivados.touched) && pacientesDerivados.invalid && pacientesDerivados.errors.pattern">pacientes derivados debe contener numeros</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-12 col-12">
+                                <label>medicos</label>
+                                <input id="medicos" name="medicos" type="text" formControlName="medicos" class="form-control" placeholder="ingrese medicos disponibles" />
+                                <div id='mensaje'>
+                                    <small id="medicosHelp" class="form-text text-muted" *ngIf="(medicos.dirty || medicos.touched) && medicos.invalid && medicos.errors.required">medicos es requerido</small>
+                                    <small id="medicosHelp" class="form-text text-muted" *ngIf="(medicos.dirty || medicos.touched) && medicos.invalid && medicos.errors.pattern">medidos debe contener numeros</small>
+                                </div>
+                            </div>
+                            <div class="form-group co-lg-12 col-12">
+                                <label>Kinesiologos</label>
+                                <input id="kinesiologos" name="kinesiologos" type="text" formControlName="kinesiologos" class="form-control" placeholder="ingrese kinesiologos disponibles" />
+                                <div id='mensaje'>
+                                    <small id="kinesiologosHelp" class="form-text text-muted" *ngIf="(kinesiologos.dirty || kinesiologos.touched) && kinesiologos.invalid && kinesiologos.errors.required">kinesiologos es Requerido</small>
+                                    <small id="kinesiologosHelp" class="form-text text-muted" *ngIf="(kinesiologos.dirty || kinesiologos.touched) && kinesiologos.invalid && kinesiologos.errors.pattern">kinesiologos debe contener numeros</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Tens</label>
+                                <input id="tens" name="tens" type="text" formControlName="tens" class="form-control" placeholder="ingrese tens disponibles" />
+                                <div id='mensaje'>
+                                    <small id="tensHelp" class="form-text text-muted" *ngIf="(tens.dirty || tens.touched) && tens.invalid && tens.errors.required">tens es requerido</small>
+                                    <small id="tensHelp" class="form-text text-muted" *ngIf="(tens.dirty || tens.touched) && tens.invalid && tens.errors.pattern">tens debe contener numeros</small>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Enfermeria</label>
+                                <input id="enfermeria" name="enfermeria" type="text" formControlName="enfermeria" class="form-control" placeholder="ingrese enfermeria disponible" />
+                                <div id='mensaje'>
+                                    <small id="enfermeriaHelp" class="form-text text-muted" *ngIf="(enfermeria.dirty || enfermeria.touched) && enfermeria.invalid && enfermeria.errors.required">kinesiologos es Requerido</small>
+                                    <small id="enfermeriaHelp" class="form-text text-muted" *ngIf="(enfermeria.dirty || enfermeria.touched) && enfermeria.invalid && enfermeria.errors.pattern">kinesiologos debe contener numeros</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-info mr-1" type="submit" [disabled]="!sitHospForm.valid">Registrar</button>
+                            <button class="btn btn-secondary" type="reset" (click)="onReset()">Reiniciar</button>
+                        </div>
+                        <div class="col-lg-12 col-12 text-center">
+
+                            <div class="row">
+                                <div class="col-lg-12 col-12 text-center mt-4">
+                                    <button type="button" class="btn btn-info " [routerLink]="['/home-hospital']">Regresar</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12">
+
+        </div>
+    </div>
+</div>

@@ -10,7 +10,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PromocionBasicScreenInfoComponent implements OnInit {
 
-  public id: number | string;
+  constructor(){
+
+  }
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    
+  }
+  /*public id: number | string;
   public datosUsuario: DatoUsuario;
   constructor(
     private infousuarioService: DatousuarioService,
@@ -21,5 +29,5 @@ export class PromocionBasicScreenInfoComponent implements OnInit {
   ngOnInit(): void{
     this.id = this.activatedRoute.snapshot.params['id'];
     this.datosUsuario = this.infousuarioService.getDatosUsuarioById(this.id);
-  }
+  }*/
 }

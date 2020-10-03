@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeCmScreenComponent } from './screens/colegio-medico-screens/home-cm-screen/home-cm-screen.component';
 
 const routes: Routes = [
   /* Funcionario routing */
+  {
+    path:'home-funcionario',
+    loadChildren:() => import('./screens/funcionario-screens/home-funcionario-screen/home-funcionario-screen.module')
+    .then(m => m.HomeFuncionarioScreenModule)
+  },
   {
     path:'postular',
     loadChildren:() => import('./screens/funcionario-screens/postulaciones-trabajo-screen/postulaciones-trabajo-screen.module')
@@ -25,6 +31,11 @@ const routes: Routes = [
   },
   /* Hospital routing */
   {
+    path:'home-hospital',
+    loadChildren:() => import('./screens/hospital-screens/home-hospital-screen/home-hospital-screen.module')
+    .then(m => m.HomeHospitalScreenModule)
+  },
+  {
     path:'postulaciones-trabajo-hospital',
     loadChildren:() => import('./screens/hospital-screens/postulaciones-trabajo-h-screen/postulaciones-trabajo-h-screen.module')
     .then(m => m.PostulacionesTrabajoHScreenModule)
@@ -44,7 +55,17 @@ const routes: Routes = [
     loadChildren:() => import('./screens/hospital-screens/postulaciones-activas-h-info-screen/postulaciones-activas-h-info-screen.module')
     .then(m => m.PostulacionesActivasHInfoScreenModule)
   },
+  {
+    path:'situacion-hospital',
+    loadChildren:() => import('./screens/hospital-screens/situacion-hospital/situacion-hospital.module')
+    .then(m => m.SituacionHospitalModule)
+  },
   /* Colegio medico routing */
+  {
+    path:'home-colegio-medico',
+    loadChildren:() => import('./screens/colegio-medico-screens/home-cm-screen/home-cm-screen.module')
+    .then(m => m.HomeCmScreenModule)
+  },
   {
     path:'solicitudes-colegio-medico',
     loadChildren:() => import('./screens/colegio-medico-screens/solicitudes-promocion-screen/solicitudes-promocion-screen.module')
@@ -67,17 +88,30 @@ const routes: Routes = [
   },
   /* usuario basico routing */
   {
+    path:'home-basic',
+    loadChildren:() => import('./screens/basic-screens/home-basic-screen/home-basic-screen.module').then(m => m.HomeBasicScreenModule)
+  },
+  {
     path:'promocion-basica',
     loadChildren:() => import('./screens/basic-screens/promocion-basic-screen/promocion-basic-screen.module').then(m => m.PromocionBasicScreenModule)
   },
   {
-    path:'promocion-basica-informacion/:id',
+    path:'promocion-basica-informacion',
     loadChildren:() => import('./screens/basic-screens/promocion-basic-screen-info/promocion-basic-screen-info.module').then(m => m.PromocionBasicScreenInfoModule)
   },
   /* login routing */
   {
     path:'login',
     loadChildren:() => import('./screens/login-screens/login-screen/login-screen.module').then(m => m.LoginScreenModule)
+  },
+  {
+    path:'registro',
+    loadChildren:() => import('./screens/registro-screen/registro/registro.module').then(m =>m.RegistroModule )
+  },
+
+  {
+  path:'',
+  loadChildren:() => import('./screens/main-home-screen/home/home.module').then(m =>m.HomeModule )
   }
 ];
 

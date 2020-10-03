@@ -1,0 +1,86 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-12">
+
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="card m-3 ">
+                <h5 class="card-header ">Registro usuario</h5>
+                <div class="card-body ">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" class="color green" role="alert">{{mensaje}}</div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-12 col-12 ">
+                                <label>Nombre</label>
+                                <input id="nombre" name="nombre" type="text" formControlName="nombre" class="form-control" placeholder="Nombre" />
+                                <div id='mensaje'>
+                                    <small id="nombreHelp" class="form-text text-muted" *ngIf="(nombre.dirty || nombre.touched) && nombre.invalid && nombre.errors.required">nombre es Requerido</small>
+                                    <small id="nombreHelp" class="form-text text-muted" *ngIf="(nombre.dirty || nombre.touched) && nombre.invalid && nombre.errors.pattern">nombre debe contener caracteres alfanumericos</small>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Apellido</label>
+                                <input id="apellido" name="apellido" type="text" formControlName="apellido" class="form-control" placeholder="Apellido" />
+                                <div id='mensaje'>
+                                    <small id="apellidoHelp" class="form-text text-muted" *ngIf="(apellido.dirty || apellido.touched) && apellido.invalid && apellido.errors.required">apellido es Requerido</small>
+                                    <small id="apellidoHelp" class="form-text text-muted" *ngIf="(apellido.dirty || apellido.touched) && apellido.invalid && apellido.errors.pattern">apellido debe contener caracteres alfanumericos</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Correo electronico</label>
+                                <input type="text" formControlName="email" class="form-control" placeholder="correo electronico" />
+                                <div id='mensaje'>
+                                    <small id="apellidoHelp" class="form-text text-muted" *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.required">correo electronico es Requerido</small>
+                                    <small id="apellidoHelp" class="form-text text-muted" *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.email">correo electronico debe contener una direccion valida</small>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Celular (+56)</label>
+                                <input type="text" formControlName="celular" class="form-control" placeholder="numero celular" />
+                                <div id='mensaje'>
+                                    <small id="celularHelp" class="form-text text-muted" *ngIf="(celular.dirty || celular.touched) && celular.invalid && celular.errors.required">celular es Requerido</small>
+                                    <small id="celularHelp" class="form-text text-muted" *ngIf="(celular.dirty || celular.touched) && celular.invalid && celular.errors.pattern">celular debe contener un numero valido</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Contraseña</label>
+                                <input type="password" formControlName="password" class="form-control" placeholder="contraseña debe tener 8 caracteres minimo" />
+                                <div id='mensaje'>
+                                    <small id="contraselaHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required">contraseña es Requerido</small>
+                                    <small id="contraselaHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.minlength">contraseña debe tener minimo 8 caracteres</small>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12 col-12">
+                                <label>Confirmar contraseña</label>
+                                <input type="password" formControlName="confirmPassword" class="form-control" placeholder="confirmar contraseña" />
+                                <div id='mensaje'>
+                                    <small id="contraselaHelp" class="form-text text-muted" *ngIf="(confirmPassword.dirty || confirmPassword.touched) && confirmPassword.invalid && confirmPassword.errors.required">confirmar contraseña es Requerido</small>
+                                    <small id="contraselaHelp" class="form-text text-muted" *ngIf="(confirmPassword.dirty || confirmPassword.touched) && confirmPassword.invalid && confirmPassword.errors.mustmatch">contraseña debe coincidir</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <button class="btn btn-primary mr-4" type="submit" [disabled]="!registerForm.valid" [routerLink]="['/home-basic']">Registrar</button>
+                                    <button class="btn btn-secondary" type="reset" (click)="onReset()">Reiniciar</button>
+
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-info mt-4" [routerLink]="['']">Regresar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+</div>

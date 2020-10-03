@@ -10,10 +10,18 @@ export class PostulacionesActivasHInfoComponent implements OnInit {
 
   @Input()
   public datoUsuario: DatoUsuario;
+  mensaje: string = "";
+  isDivVisible = false;
+  
   constructor() {
 
   }
 
   ngOnInit(): void {
+  }
+  postulacion()
+  {
+    this.mensaje = "Eliminacion Exitosa";
+    this.isDivVisible = true;   
   }
 }

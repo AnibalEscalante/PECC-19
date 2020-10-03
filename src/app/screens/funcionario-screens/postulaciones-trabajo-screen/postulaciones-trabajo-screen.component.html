@@ -5,13 +5,18 @@
 
         </div>
         <div class="col-lg-4 col-12 mt-4">
-            <div class="card col-lg-12 col-12">
+            <div class="card col-lg-12 col-12 background">
                 <h5 class="card-title text-left mt-4 ml-4">Seleccione la clinica</h5>
                 <div class="card-body">
                     <div class="accordion" id="accordionExample">
                         <div class="col-12" *ngFor="let DatoClinica of datosClinica">
                             <app-postulaciones-trabajo [datoClinica]="DatoClinica"></app-postulaciones-trabajo>
                         </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-info" [routerLink]="['/home-funcionario']">Regresar</button>
                     </div>
                 </div>
             </div>

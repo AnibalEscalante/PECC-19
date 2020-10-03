@@ -1,52 +1,51 @@
 <ng-container class="container-fluid">
-    <div class="card mt-4">
+    <div class="card col-lg-12 col-12 mt-4">
         <div class="row">
             <div class="col-12 text-centerv mb-3">
                 <p class="text-dark mb-0">Nombre:{{datoUsuario.nombreUsuario}}</p>
                 <p class="text-dark mb-0">Email:{{datoUsuario.emailUsuario}}</p>
+                <p class="text-dark mb-0">Tipo de usuario:{{datoUsuario.promocionUsuario}}</p>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center mt-3">
 
-            <label> Seleccione una opcion</label>
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-12 col-12 text-center mb-4">
-                            <button type="button" class="btn btn-info btn-sm">Funcionario</button>
-                        </div>
-                        <div class="col-lg-12 col-12 text-center">
-                            <button type="button" class="btn btn-info btn-sm">Hospital</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 text-center mt-5">
+        <div class="col-lg-12 col-12 text-center mt-5">
             <div class="card" style="height:6rem;">
                 <form>
                     <div class="form-group text-center">
-                        <label class=" text-center" for="exampleFormControlFile1">Seleccione documentacion</label>
+                        <label class=" text-center" for="exampleFormControlFile1">Descargar Archivo</label>
                         <input type="file" class="form-control-file" id="archivo">
                     </div>
                 </form>
             </div>
         </div>
-        <div class="col-12 text-center mt-3">
+        <div class="col-lg-12 col-12 text-center mt-3">
 
             <label> Seleccione una opcion</label>
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-12 col-12 text-center mb-4">
-                            <button type="button" class="btn btn-info btn-sm">Confirmar</button>
+                            <button type="button" class="btn btn-success btn-sm">Aceptar</button>
                         </div>
                         <div class="col-lg-12 col-12 text-center">
-                            <button type="button" class="btn btn-info btn-sm">Volver</button>
+                            <button type="button" class="btn btn-danger btn-sm">Rechazar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-12 text-center mt-3">
+
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+                            <button type="button" class="btn btn-info btn-sm" [routerLink]="['/solicitudes-colegio-medico']">Regresar</button>
 
                         </div>
                     </div>
@@ -54,4 +53,5 @@
             </div>
         </div>
     </div>
+
 </ng-container>

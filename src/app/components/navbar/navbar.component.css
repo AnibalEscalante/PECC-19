@@ -1,24 +1,30 @@
 body {
-  background-color: #77C9D4;
-}
-a {
-  color: black;
-  border: solid 2px;
-  border-color: black;
-}
-#botonBarra {
-  font-size: 30px;
+  background-color: #9dcddb;
 }
 nav {
-  background-color: #57BC90;
-  border: solid 2px;
-  border-color: black;
+  background-color: #17a2b8;
 }
 h1 {
-  background-color: #57BC90;
-  text-decoration-style: #015249;
+  background-color: #17a2b8;
+  text-shadow: 1px 1px 1px;
 }
-#sidebar {
-  background-color: #77C9D4;
-  color: black;
+#botonHome {
+  background-color: #9dcddb;
+  color: #015249;
+  border: solid 2px;
+}
+#botonHomeIco {
+  font-size: 30px;
+}
+#registrar {
+  background-color: #9dcddb;
+  color: #015249;
+  border: solid 2px;
+  text-shadow: 1px 1px 1px;
+}
+#iniciar {
+  background-color: #9dcddb;
+  color: #015249;
+  border: solid 2px;
+  text-shadow: 1px 1px 1px;
 }

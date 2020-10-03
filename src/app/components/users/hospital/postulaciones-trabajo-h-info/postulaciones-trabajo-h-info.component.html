@@ -1,5 +1,5 @@
-<ng-container class="container-fluid">
-    <div class="card mt-4">
+<ng-container class="container-fluid ">
+    <div class="card mt-4 ">
         <div class="row">
             <div class="col-lg-12 col-12 text-center mb-3">
                 <p class="text-dark mb-0">Nombre:{{datoUsuario.nombreUsuario}}</p>
@@ -12,8 +12,10 @@
             <div class="card" style="height:6rem;">
                 <form>
                     <div class="form-group text-center">
-                        <label class=" text-center" for="exampleFormControlFile1">Seleccione documentacion</label>
-                        <input type="file" class="form-control-file" id="archivo">
+                        <label class=" text-center" for="exampleFormControlFile1">Descargar curriculum</label>
+                        <div class="col-lg-12 col-12 text-center mb-4">
+                            <button type="button" class="btn btn-info btn-sm" (click)="Descargado()" [disabled]="isDivVisible1" [disabled]="isDivVisible2">Descargar</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -24,10 +26,35 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-12 col-12 text-center mb-4">
-                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+
+                        <div class="col-lg-12 col-12 text-center mt-3">
+                            <div class="alert alert-success btn-sm" role="alert" *ngIf="isDivVisible1">
+                                {{mensaje1}}
+                            </div>
+                            <button type="summit" (click)='postulacion1()' class="btn btn-success" [disabled]="!descargado">
+                                    Aceptar
+                            </button>
+                        </div>
+                        <div class="col-lg-12 col-12 text-center mt-3">
+                            <div class="alert alert-success btn-sm" role="alert" *ngIf="isDivVisible2">
+                                {{mensaje2}}
+                            </div>
+                            <button type="summit" (click)='postulacion2()' class="btn btn-danger" [disabled]="!descargado">
+                                  Rechazar
+                           </button>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-12 text-center mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center mt-2">
+                            <button type="button" class="btn btn-info" [routerLink]="['/postulaciones-trabajo-hospital']">Regresar</button>
+                        </div>
                     </div>
                 </div>
             </div>
