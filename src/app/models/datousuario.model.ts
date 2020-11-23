@@ -8,4 +8,5 @@ export interface DatoUsuario{
     passwordUsuario: string;
     _idHospital: number | string;
     promocionUsuario: string;
+    
 }

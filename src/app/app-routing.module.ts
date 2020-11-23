@@ -29,6 +29,11 @@ const routes: Routes = [
     loadChildren:() => import('./screens/funcionario-screens/postulaciones-activas-info-screen/postulaciones-activas-info-screen.module')
     .then(m => m.PostulacionesActivasInfoScreenModule)
   },
+  {
+    path:'cargar-curriculum',
+    loadChildren:() => import('./screens/funcionario-screens/cargar-cv-funcionario-screen/cargar-cv-funcionario-screen.module')
+    .then(m => m.CargarCvFuncionarioScreenModule)
+  },
   /* Hospital routing */
   {
     path:'home-hospital',
@@ -86,6 +91,26 @@ const routes: Routes = [
     loadChildren:() => import('./screens/colegio-medico-screens/modificar-datos-info-screen/modificar-datos-info-screen.module')
     .then(m => m.ModificarDatosInfoScreenModule)
   },
+  {
+    path:'solicitudes-colegio-medico-hosp',
+    loadChildren:() => import('./screens/colegio-medico-screens/solicitudes-promocion-hosp-screen/solicitudes-promocion-hosp-screen.module')
+    .then(m => m.SolicitudesPromocionHospScreenModule)
+  },
+  {
+    path:'informacion-solicitudes-colegio-medico-hosp/:id',
+    loadChildren:() => import('./screens/colegio-medico-screens/solicitudes-promocion-hosp-info-screen/solicitudes-promocion-hosp-info-screen.module')
+    .then(m => m.SolicitudesPromocionHospInfoScreenModule)
+  },
+  {
+    path:'modificar-datos-hosp',
+    loadChildren:() => import('./screens/colegio-medico-screens/modificar-datos-hosp-screen/modificar-datos-hosp-screen.module')
+    .then(m => m.ModificarDatosHospScreenModule)
+  },
+  {
+    path:'informacion-modificar-datos-hosp/:id',
+    loadChildren:() => import('./screens/colegio-medico-screens/modificar-datos-hosp-info-screen/modificar-datos-hosp-info-screen.module')
+    .then(m => m.ModificarDatosHospInfoScreenModule)
+  },
   /* usuario basico routing */
   {
     path:'home-basic',
@@ -96,8 +121,12 @@ const routes: Routes = [
     loadChildren:() => import('./screens/basic-screens/promocion-basic-screen/promocion-basic-screen.module').then(m => m.PromocionBasicScreenModule)
   },
   {
-    path:'promocion-basica-informacion',
+    path:'promocion-basica-inf-funcionario',
     loadChildren:() => import('./screens/basic-screens/promocion-basic-screen-info/promocion-basic-screen-info.module').then(m => m.PromocionBasicScreenInfoModule)
+  },
+  {
+    path:'promocion-basica-inf-hospital',
+    loadChildren:() => import('./screens/basic-screens/promocion-basic-hosp-info-screen/promocion-basic-hosp-info-screen.module').then(m => m.PromocionBasicHospInfoScreenModule)
   },
   /* login routing */
   {

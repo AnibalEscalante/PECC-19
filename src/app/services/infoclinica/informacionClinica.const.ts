@@ -69,7 +69,7 @@ export const informacionClinica: DatoClinica[] = [
     },
     {
       _id: 7,
-      nombreClinica: 'Clinica 45',
+      nombreClinica: 'Clinica 352',
       cuposMedicos: 2,
       cuposKinesiologo: 4,
       cuposTens: 2,
@@ -80,7 +80,7 @@ export const informacionClinica: DatoClinica[] = [
     },
     {
       _id: 8,
-      nombreClinica: 'Clinica 45',
+      nombreClinica: 'Clinica 13',
       cuposMedicos: 2,
       cuposKinesiologo: 4,
       cuposTens: 2,
@@ -91,7 +91,7 @@ export const informacionClinica: DatoClinica[] = [
     },
     {
       _id: 10,
-      nombreClinica: 'Clinica 45',
+      nombreClinica: 'Clinica 23',
       cuposMedicos: 2,
       cuposKinesiologo: 4,
       cuposTens: 2,
@@ -102,7 +102,7 @@ export const informacionClinica: DatoClinica[] = [
     },
     {
       _id: 11,
-      nombreClinica: 'Clinica 45',
+      nombreClinica: 'Clinica 42',
       cuposMedicos: 2,
       cuposKinesiologo: 4,
       cuposTens: 2,
@@ -113,7 +113,7 @@ export const informacionClinica: DatoClinica[] = [
     },
     {
       _id: 12,
-      nombreClinica: 'Clinica 45',
+      nombreClinica: 'Clinica 6',
       cuposMedicos: 2,
       cuposKinesiologo: 4,
       cuposTens: 2,
@@ -124,7 +124,7 @@ export const informacionClinica: DatoClinica[] = [
     },
     {
       _id: 13,
-      nombreClinica: 'Clinica 45',
+      nombreClinica: 'Clinica 90',
       cuposMedicos: 1,
       cuposKinesiologo: 4,
       cuposTens: 2,
@@ -135,7 +135,7 @@ export const informacionClinica: DatoClinica[] = [
     },
     {
       _id: 14,
-      nombreClinica: 'Clinica 45',
+      nombreClinica: 'Clinica 56',
       cuposMedicos: 6,
       cuposKinesiologo: 4,
       cuposTens: 2,
@@ -146,7 +146,7 @@ export const informacionClinica: DatoClinica[] = [
     },
     {
       _id: 15,
-      nombreClinica: 'Clinica 45',
+      nombreClinica: 'Clinica 754',
       cuposMedicos: 2,
       cuposKinesiologo: 4,
       cuposTens: 2,
