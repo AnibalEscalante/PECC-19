@@ -9,7 +9,8 @@ import { InfoclinicaService } from '../../../services/infoclinica/infoclinica.se
   styleUrls: ['./postulaciones-activas-info-screen.component.less']
 })
 export class PostulacionesActivasInfoScreenComponent implements OnInit {
-
+  
+  
   public id: number | string;
   public datosClinica: DatoClinica;
   constructor(

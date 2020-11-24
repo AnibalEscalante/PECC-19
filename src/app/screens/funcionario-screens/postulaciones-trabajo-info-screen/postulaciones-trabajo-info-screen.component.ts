@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatoClinica } from '../../../models/datoclinica.model';
 import { InfoclinicaService } from '../../../services/infoclinica/infoclinica.service';
+import { PostulacionProviderService } from '../../../providers/postulacion/postulacion-provider.service';
 
 @Component({
   selector: 'app-postulaciones-trabajo-info-screen',

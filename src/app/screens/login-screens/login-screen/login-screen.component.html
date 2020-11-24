@@ -5,38 +5,42 @@
         </div>
 
         <div class="col-lg-4 col 12">
+            <div class="card m-3 ">
+                <h5 class="card-header ">Iniciar sesion</h5>
+                <div class="card-body ">
+                    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
 
-            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                        <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" class="color green" role="alert">{{mensaje}}</div>
 
-                <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" class="color green" role="alert">{{mensaje}}</div>
+                        <div id='formulario' [ngClass]="{lleno: mensaje}">
+                            <h3>Usuario</h3>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
 
-                <div id='formulario' [ngClass]="{lleno: mensaje}">
-                    <h3>Iniciar Sesión</h3>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                                </div>
+                                <input id="usuario" name='usuario' class="form-control" type="email" formControlName="usuario" placeholder="Usuario">
+                                <div id='mensaje'>
+                                    <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.required"> Requerido  </small>
+                                    <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.email">Formato email requerido</small>
+                                </div>
+                            </div>
+                            <h3>Contraseña</h3>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input id="password" class="form-control" type="password" formControlName="password" placeholder="Password">
+                                <div id='mensaje'>
+                                    <small id="emailHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required"> Requerido </small>
+                                </div>
+                            </div>
+
+                            <button class="button" type="submit" [disabled]="!checkoutForm.valid" (click)="SesionIniciada()" [routerLink]="['/home-basic']">Iniciar Sesión</button>
 
                         </div>
-                        <input id="usuario" name='usuario' class="form-control" type="email" formControlName="usuario" placeholder="Usuario">
-                        <div id='mensaje'>
-                            <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.required"> Requerido  </small>
-                            <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.email">Formato email requerido</small>
-                        </div>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-
-                        </div>
-                        <input id="password" class="form-control" type="password" formControlName="password" placeholder="Password">
-                        <div id='mensaje'>
-                            <small id="emailHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required"> Requerido </small>
-                        </div>
-                    </div>
-
-                    <button class="button" type="submit" [disabled]="!checkoutForm.valid" (click)="SesionIniciada()" [routerLink]="['/home-basic']">Iniciar Sesión</button>
-
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
